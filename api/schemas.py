@@ -1,6 +1,5 @@
 from datetime import datetime
 from enum import Enum
-from typing import List
 
 from pydantic import BaseModel
 
@@ -29,3 +28,4 @@ class CustomerCreate(BaseModel):
 
 class CustomerRead(CustomerCreate):
     id: int
+
