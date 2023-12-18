@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
 from database import get_session
-from queries import get_all_customers, get_specific_customer, insert_customer
+from queries.customers import get_all_customers, fetch_specific_customer, insert_customer
 from schemas import CustomerRead, CustomerCreate
 
 router = APIRouter(
@@ -20,7 +20,7 @@ def get_customers(session: Session = Depends(get_session)):
 
 @router.get("/customers/{telegramm_id}", response_model=List[CustomerRead])
 def get_customer(telegramm_id: int, session: Session = Depends(get_session)):
-    return get_specific_customer(telegramm_id, session)
+    return fetch_specific_customer(telegramm_id, session)
 
 
 @router.post("/customers/")

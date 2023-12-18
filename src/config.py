@@ -16,3 +16,5 @@ DB_USER_TEST = os.environ.get("DB_USER_TEST")
 DB_PASS_TEST = os.environ.get("DB_PASS_TEST")
 
 SECRET_AUTH = os.environ.get("SECRET_AUTH")
+
+TELEGRAMM_TOKEN = os.environ.get("TELEGRAMM_TOKEN")
