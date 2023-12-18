@@ -11,7 +11,7 @@ services:
 
   app:
     build:
-      context: src
+      context: .
     env_file:
       - .env-non-dev
     container_name: fastapi_app
